@@ -1,0 +1,103 @@
+.footer {
+    background-color: #0a1423;
+    font-size: 1rem;
+    padding-top: 50px;
+    text-decoration: none;
+    padding: 40px 0px 0px 40px;
+  
+    a:hover {
+      text-decoration: underline;
+    }
+  
+    .container {
+      display: flex;
+      justify-content: space-between;
+
+        margin-top: 20px;
+        @include respond(phone){
+         flex-direction: column;
+         margin-left: 5%;
+       }
+    
+    }
+  
+    &__logo {
+      width: 80px;
+    }
+  
+    &__address {
+      display: flex;
+      width: 30%;
+
+  
+      svg {
+        flex: 0 0 13px;
+        margin-top: 3px;
+        margin-right: 20px;
+      }
+    }
+  
+    &__contact {
+      grid-area: contact;
+   
+  
+      a {
+        font-size: 0.875rem;
+        text-decoration: none;
+        color: white;
+      }
+  
+      &-phone,
+      &-email {
+        display: flex;
+      }
+  
+      &-phone {
+        margin-bottom: 20px;
+      }
+  
+      &-phone svg {
+        width: 18px;
+        margin-right: 20px;
+      }
+  
+      &-email svg {
+        width: 20px;
+        margin-right: 20px;
+      }
+    }
+  
+    &__links1,
+    &__links2 {
+      a {
+        display: block;
+        margin-bottom: 20px;
+        text-decoration: none;
+        color: white;
+      }
+    }
+  
+   
+  
+    &__social {
+      justify-self: center;
+
+  
+      svg {
+        width: 35px;
+        height: 35px;
+        border: 1px solid #ffffff;
+        border-radius: 50%;
+        padding: 8px;
+        fill: #ffffff;
+        margin-right: 16px;
+        transition: all 150ms ease-in-out;
+  
+        &:hover {
+          background-color: rgba(0, 161, 182, 0.76);
+          fill: #0a1423;
+        }
+      }
+    }
+  }
+  

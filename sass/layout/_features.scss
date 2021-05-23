@@ -1,0 +1,117 @@
+.feature {
+  &__section {
+    height: 87rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    &--row {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      width: 100%;
+      @include respond(phone) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    & h4 {
+      font-weight: 400;
+    }
+  }
+  &__img {
+    margin-bottom: 1.5rem;
+    height: 8.5rem;
+  }
+
+  &__card {
+    width: 30rem;
+    & h2 {
+      font-family: "Raleway", sans-serif;
+    }
+  }
+}
+.productivity-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  @include respond(phone) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &--link:link,
+  &--link:visited {
+    color: #6ddad5;
+    text-decoration: none;
+    font-size: x-small;
+    position: relative;
+    display: inline-flex;
+    gap: 4px;
+    @include respond(phone){
+     margin-left: 40%;
+  }
+  }
+  &--link:hover {
+    color: $white-color;
+  }
+
+  &--link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    display: inline-block;
+    height: 1.5em;
+    width: 98%;
+    border-bottom: 1px solid;
+    margin-top: 5px;
+    color: #6ddad5;
+  }
+  &--link:hover::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    display: inline-block;
+    height: 1.5em;
+    width: 98%;
+    border-bottom: 1px solid;
+    margin-top: 5px;
+    color: $white-color;
+  }
+
+  &--link:hover &--link__img {
+    filter: grayscale(100%);
+  }
+  & h1 {
+    width: 70%;
+    font-size: x-large;
+    font-family: "Raleway", sans-serif;
+    @include respond(phone) {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  & h4 {
+    font-weight: 400;
+    @include respond(phone){
+      width: 100%;
+    text-align: center;
+  }
+  }
+  &--img {
+    width: 40%;
+    @include respond(phone) {
+      width: 60%;
+    }
+  }
+  &--text {
+    width: 32%;
+    @include respond(phone) {
+      width: 100%;
+    }
+  }
+}
